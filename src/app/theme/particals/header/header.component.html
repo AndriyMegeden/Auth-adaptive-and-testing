@@ -1,0 +1,31 @@
+<div class="container">
+  <div class="row d-flex justify-space-between align-center">
+    <div class="logo" routerLink="/home">
+      <img [src]="logo" alt="Logo">
+    </div>
+    <div class="menu">
+      <ul class="d-flex justify-space-between">
+        <ng-container *ngFor="let menu of menus">
+          <li routerLinkActive="active" [routerLink]="menu.link"> {{ menu.title | translate }} </li>
+        </ng-container>
+      </ul>
+    </div>
+    <div class="left-wrap d-flex align-center">
+      <div class="lang">
+        <div class="icons d-flex align-center">
+          <ion-icon class="lang-icon" [name]="'lang-' + currentLanguage" (click)="switchLanguage()"></ion-icon>
+          <ion-icon class="arrow" name="arrow-down"></ion-icon>
+        </div>
+      </div>
+      <div class="menu-mobile d-flex align-center" (click)="changeToggle()">
+        <ion-icon [name]="!mobileMenuOpen ? 'burger-open' : 'burger-close'"></ion-icon>
+      </div>
+    </div>
+   
+    <div class="account d-flex align-center">
+      <ion-icon class="m-r-10" name="user-account"></ion-icon>
+      <span routerLink="/register" translate> particals.header.register </span>
+    </div>
+    
+  </div>
+</div>

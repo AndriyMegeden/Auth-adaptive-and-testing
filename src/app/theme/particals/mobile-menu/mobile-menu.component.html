@@ -1,0 +1,43 @@
+<div class="absolute-container">
+  <div class="container">
+    <div class="menu">
+      <ul>
+        <ng-container *ngFor="let menu of menus">
+          <li routerLinkActive="active" [routerLink]="menu.link">
+            {{ menu.title | translate }}
+          </li>
+        </ng-container>
+      </ul>
+    </div>
+    <div class="lang-wrap">
+      <div class="lang">
+        <div class="icons d-flex align-center">
+          <ion-icon
+            class="lang-icon"
+            [name]="'lang-' + currentLanguage"
+            (click)="switchLanguage()"
+          ></ion-icon>
+          <ion-icon class="arrow" name="arrow-down"></ion-icon>
+        </div>
+      </div>
+    </div>
+    <div class="account-wrap m-b-15">
+      <ion-button>
+        <div class="account d-flex align-center">
+          <span class="m-r-10" routerLink="/register" translate>
+            particals.header.register
+          </span>
+          <ion-icon  name="user-account"></ion-icon>
+        </div>
+      </ion-button>
+    </div>
+    <div class="buy-wrap">
+        <div class="button">
+            <ion-button>
+              <span>buy now</span>
+              <ion-icon  name="arrow-right"></ion-icon>
+            </ion-button>
+          </div>
+    </div>
+  </div>
+</div>

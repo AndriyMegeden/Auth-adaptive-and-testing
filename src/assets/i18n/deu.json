@@ -1,0 +1,99 @@
+{
+    "components": {
+      "auth": {
+        "login": {
+          "title": "Anmelden",
+          "subtitle": "Noch kein Konto?",
+          "register": "Registrierung",
+          "forgot": "Passwort vergessen?"
+        },
+        "register": {
+          "title": "Registrierung",
+          "subtitle": "Bereits registriert?",
+          "login": "Anmelden",
+          "forgot": "Passwort vergessen?"
+        },
+        "forgot": {
+          "title": "Passwort vergessen",
+          "subtitle": "Bereits registriert?",
+          "login": "Anmelden"
+        },
+        "inputs": {
+          "email": {
+            "label": "Ihre E-Mail-Adresse *",
+            "placeholder": "Ihre E-Mail-Adresse"
+          },
+          "password": {
+            "label": "Geben Sie Ihr Passwort ein *",
+            "placeholder": "Ihr Passwort"
+          },
+          "repeat_password": {
+            "label": "Passwort wiederholen *",
+            "placeholder": "Ihr Passwort"
+          }
+        },
+        "checkboxes": {
+          "agreement": "Ich stimme den <span> Nutzungsbedingungen </span> und <br> <span>Datenschutzbestimmungen </span> zu."
+        },
+        "socials": {
+          "facebook": "Mit Facebook anmelden",
+          "google": "Mit Google anmelden"
+        }
+      },
+      "my_qr_center": {
+        "title": "Wenn Sie unseren QR-Code nicht über unsere Website erworben haben, geben Sie bitte Ihren neunstelligen Code in das untenstehende Feld ein oder nutzen Sie die Scan-Funktion:",
+        "button_confirm": "Bestätigen",
+        "button_scan": "Scannen"
+      }
+    },
+    "particals": {
+      "header": {
+        "register": "Registrieren"
+      },
+      "footer": {
+        "navigation": "Navigation",
+        "about_us": "Über uns",
+        "contact": "Kontakt",
+        "license": "ⓒ 2023 VorfahrQR, Alle Rechte vorbehalten"
+      }
+    },
+    "layouts": {
+      "menu_layout": {
+        "my_archive": "Mein Archiv",
+        "access_settings": "Zugriffseinstellungen",
+        "my_qr_center": "Mein QR-Zentrum",
+        "account_settings": "Kontoeinstellungen",
+        "support_center": "Support-Center",
+        "logout": "Abmelden"
+      }
+    },
+    "modals": {
+      "custom_modal": {
+        "register": {
+          "title": "<span>Vielen Dank,</span> für die Registrierung bei uns!",
+          "subtitle": "Leider haben Sie Ihre E-Mail-Adresse noch nicht bestätigt. Wir haben Ihnen eine weitere Bestätigungs-E-Mail gesendet. Bitte überprüfen Sie Ihr Postfach sowie den 'Spam'- und 'Werbung'-Ordner, falls die E-Mail dort gelandet ist.",
+          "button_text": "E-Mail erneut senden"
+        }
+      }
+    },
+    "other":{
+      "menus": {
+        "home": "Startseite",
+        "products": "Produkte",
+        "price": "Preise",
+        "faq": "FAQ",
+        "contact": "Kontakt",
+        "about_us": "Über uns",
+        "our_terms": "Unsere Bedingungen",
+        "imprint": "Impressum",
+        "data_protection": "Datenschutz"
+      },
+      "http_errors": {
+        "403": "Falscher Benutzername oder falsches Passwort",
+        "404": "Benutzer existiert nicht",
+        "409": "Benutzer existiert bereits",
+        "500": "Etwas ist schief gelaufen",
+        "429": "Sie haben Ihr tägliches Anfrage-Limit erreicht"
+      }
+    }
+  }

@@ -1,0 +1,36 @@
+<div class="modal-absolute-container d-flex justify-center align-center">
+  <div class="close">
+    <ion-icon name="close" (click)="close();"></ion-icon>
+    
+  </div>
+  <div class="close-black">
+    <ion-icon name="close-black" (click)="close();"></ion-icon>
+  </div>
+  <div class="content d-flex d-wrap justify-center" [class.reset]="type === 'scanner'">
+    <ng-container *ngIf="type === 'custom'">
+      <div class="image">
+        <img src="assets/png/design/mail.png" alt="">
+      </div>
+      <div class="text-container">
+        <div class="title" [innerHTML]="config.title | translate"></div>
+        <div class="subtitle">{{ config.subtitle | translate }}</div>
+        <ng-container *ngIf="config.button">
+          <div class="btn-container d-flex justify-center">
+            <div class="button">
+              <ion-button (click)="resolve()">
+                <span> {{ config.button.text | translate }} </span>
+                <ion-icon class="m-l-15" [name]="config.button.icon"></ion-icon>
+              </ion-button>
+            </div>
+          </div>
+        </ng-container>
+      </div>
+    </ng-container>
+    <ng-container *ngIf="type === 'scanner'">
+      <div class="scanner" [hidden]="hidden">
+        <ngx-scanner-qrcode #action="scanner" (event)="onScanSuccess($event); "></ngx-scanner-qrcode>
+        <div style="visibility: hidden;"> {{ action.start() }} </div>
+      </div>
+    </ng-container>
+  </div>
+</div>

@@ -1,0 +1,21 @@
+<div class="container d-flex">
+  <div class="menu-container">
+    <div class="menu">
+      <ng-container *ngFor="let menu of menus">
+        <div class="menu-item d-flex align-center" routerLinkActive="active" [routerLink]="menu.link" (click)="activeMenu = menu">
+          <ion-icon [name]="menu.icon"></ion-icon>
+          <div class="menu-text m-l-10">{{ menu.title | translate }}</div>
+        </div>
+      </ng-container>
+    </div>
+  </div>
+  <div class="content">
+    
+    <div class="title">
+      <img class="qr-code" src="/assets/svg/general/qr-code.svg" alt="">
+      <span class="m-lr-20">{{ activeMenu.title | translate }}</span>
+      <img class="arrow-down" src="/assets/svg/general/green-arrow.svg" alt="">
+    </div>
+    <ng-content></ng-content>
+  </div>
+</div>

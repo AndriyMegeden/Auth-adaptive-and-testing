@@ -1,0 +1,14 @@
+.go-up{
+    position: fixed;
+    right: 30px;
+    bottom: 40px;
+    z-index: 99;
+    ion-button{
+        --padding-start: 24px;
+        --padding-end: 24px;
+        --padding-top: 24px;
+        --padding-bottom: 24px;
+        --background: #017A3F;
+        --border-radius: 100px;
+    }
+}

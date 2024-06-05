@@ -1,0 +1,23 @@
+<app-card-layout>
+  <div class="title" translate> components.my_qr_center.title </div>
+  <div class="qr-container d-flex align-end">
+    <div class="qr-code">
+      <img src="assets/png/design/qrcode.png">
+    </div>
+    <div class="input m-l-20">
+      <form [formGroup]="form">
+        <ion-item lines="none">
+          <ion-input formControlName="qrCode"></ion-input>
+        </ion-item>
+      </form>
+    </div>
+  </div>
+  <div class="btn-container d-flex">
+    <div class="button" (click)="getForm()">
+      <ion-button class="m-r-20" [disabled]="form.invalid"><span translate> components.my_qr_center.button_confirm </span></ion-button>
+    </div>
+    <div class="button m-r-20">
+      <ion-button class="secondary" (click)="scanQr()"><span translate> components.my_qr_center.button_scan </span></ion-button>
+    </div>
+  </div>
+</app-card-layout>

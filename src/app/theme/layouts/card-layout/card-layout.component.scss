@@ -1,0 +1,11 @@
+.card-container{
+    padding: 30px;
+    border-radius: 20px;
+    background: #EFEFEF;
+}
+
+@media (max-width: 360px){
+    .card-container{
+       margin-right: 15px;
+    }
+}

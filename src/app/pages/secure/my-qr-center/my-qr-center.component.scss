@@ -1,0 +1,71 @@
+app-card-layout{
+    .title{
+        color: #000;
+        font-family: Poppins;
+        font-size: 18px;
+        font-style: normal;
+        font-weight: 500;
+        line-height: normal;
+        margin-bottom: 20px;
+    }
+    .qr-container{
+      margin-bottom: 20px;
+        .qr-code{
+            display: block;
+        }
+        .input{
+            width: 350px;
+        }
+    }
+    .btn-container{
+        .button{
+            ion-button{
+              --padding-start: 30px;
+              --padding-end: 30px;
+              --padding-top: 15px;
+              --padding-bottom: 15px;
+              --border-radius: 100px;
+              --background: #017A3F;
+              color: var(--3, #FFF);
+              &.secondary{
+                --background: white;
+                --border-color: #017A3F;
+                --border-style: solid;
+                --border-width: 1px;
+        
+                span{
+                    color: var(--3, #017A3F);
+                }
+              }
+              span{
+                color: var(--3, #FFF);
+                text-align: center;
+                font-family: Poppins;
+                font-size: 16px;
+                font-style: normal;
+                font-weight: 600;
+                line-height: 120%;
+                text-transform: none;
+              }
+              ion-icon{
+                font-size: 27px;
+              }
+            }
+          }
+    }
+
+}
+
+@media (max-width: 360px){
+  .btn-container{
+    flex-direction: column;
+    .button{
+        ion-button{
+          &.secondary{
+            margin-left: 0px;
+          }
+        }
+      }
+}
+
+}

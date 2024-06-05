@@ -1,0 +1,19 @@
+<ion-content>
+  <ion-header>
+    <ion-toolbar>
+      <app-header (onChangeToggle)="changeToggle($event)"></app-header>
+    </ion-toolbar>
+  </ion-header>
+  <ng-container *ngIf="!mobileMenuOpen; else elseTemplate">
+    <router-outlet></router-outlet>
+  </ng-container>
+  <ng-template #elseTemplate>
+    <app-mobile-menu></app-mobile-menu>
+  </ng-template>
+  <app-go-up (onGoUp)="goUp()"></app-go-up>
+  <ion-footer>
+    <ion-toolbar>
+      <app-footer></app-footer>
+    </ion-toolbar>
+  </ion-footer>
+</ion-content>

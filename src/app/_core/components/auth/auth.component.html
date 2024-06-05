@@ -1,0 +1,102 @@
+<app-auth-layout [page]="page">
+  <div class="auth-container">
+    <div class="title">{{ currentMode.title | translate }}</div>
+    <div class="subtitle">
+      {{ currentMode.subtitle | translate }}
+      <span [routerLink]="page === 'register' ? '/login' : '/register'">
+        {{
+          (page === "register"
+            ? "components.auth.register.login"
+            : "components.auth.login.register"
+          ) | translate
+        }}
+      </span>
+    </div>
+    <div class="socials" *ngIf="check('sections', 'socials')">
+      <ng-container *ngFor="let social of socials">
+        <div class="button">
+          <ion-button (click)="getAction(social)">
+            <ion-icon class="m-r-15" [name]="social"></ion-icon>
+            <span>{{ "components.auth.socials." + social | translate }}</span>
+          </ion-button>
+        </div>
+      </ng-container>
+    </div>
+    <form [formGroup]="form">
+      <ng-container *ngFor="let input of currentMode.fields">
+        <div class="input">
+          <div class="label">{{ input.label | translate }}</div>
+          <ion-item>
+            <ng-container
+              *ngIf="input.fieldType === 'password'; else elseInputTemplate"
+            >
+              <ion-input
+                lines="none"
+                [placeholder]="input.placeholder | translate"
+                [formControlName]="input.fieldId"
+                [type]="input.show ? 'text' : input.fieldType"
+              ></ion-input>
+              <ng-container *ngIf="input.icon">
+                <ion-icon
+                  [name]="input.show ? input.showIcon : input.icon"
+                  (click)="input.show = !input.show"
+                ></ion-icon>
+              </ng-container>
+            </ng-container>
+            <ng-template #elseInputTemplate>
+              <ion-input
+                lines="none"
+                [placeholder]="input.placeholder | translate"
+                [formControlName]="input.fieldId"
+                [type]="input.fieldType"
+              ></ion-input>
+              <ng-container *ngIf="input.icon">
+                <ion-icon [name]="input.icon"></ion-icon>
+              </ng-container>
+            </ng-template>
+          </ion-item>
+        </div>
+      </ng-container>
+      <ng-container *ngFor="let checkbox of currentMode.checkboxes">
+        <div class="checkbox d-flex align-start">
+          <ion-checkbox
+            [formControlName]="checkbox.checkboxId"
+            [value]="checkbox.checkboxValue"
+          ></ion-checkbox>
+          <div
+            class="label m-l-15"
+            [innerHTML]="checkbox.label | translate"
+          ></div>
+        </div>
+      </ng-container>
+    </form>
+    <div class="buttons d-flex align-center">
+      <div class="button">
+        <ion-button
+          [disabled]="
+            form.invalid ||
+            (page === 'register' &&
+              form.get('password').value !== form.get('repeat_password').value)
+          "
+          (click)="getForm()"
+        >
+          <span>{{
+            (page === "register"
+              ? "components.auth.login.register"
+              : "components.auth.register.login"
+            ) | translate
+          }}</span>
+          <ion-icon class="m-l-15" name="arrow-right"></ion-icon>
+        </ion-button>
+      </div>
+      <div class="link">
+        {{
+          (page === "register"
+            ? "components.auth.register.forgot"
+            : "components.auth.register.forgot"
+          ) | translate
+        }}
+      </div>
+    </div>
+  </div>
+</app-auth-layout>

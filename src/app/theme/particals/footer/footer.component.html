@@ -1,0 +1,61 @@
+<div class="container">
+  <div class="row d-flex justify-space-between">
+    <div class="logo" routerLink="/home">
+      <img [src]="logo" alt="Logo">
+    </div>
+    <div class="logo-mobile" routerLink="/home">
+      <img [src]="logoMobile" alt="Logo">
+    </div>
+    <div class="right-wrap d-flex">
+     
+      <div class="column navigation">
+        <div class="title" translate> particals.footer.navigation </div>
+        <ul>
+          <li routerLinkActive="active" routerLink="/home" translate> other.menus.home </li>
+          <li routerLinkActive="active" routerLink="/products" translate> other.menus.products </li>
+          <li routerLinkActive="active" routerLink="/price" translate> other.menus.price </li>
+          <li routerLinkActive="active" routerLink="/faq" translate> other.menus.faq </li>
+          <li routerLinkActive="active" routerLink="/contact" translate> other.menus.contact </li>
+          <li routerLinkActive="active" routerLink="/about-us" translate> other.menus.about_us </li>
+        </ul>
+      </div>
+
+
+      <div class="column about-us">
+        <div class="title" translate> particals.footer.about_us </div>
+        <ul>
+          <li routerLinkActive="active" translate> other.menus.our_terms </li>
+          <li routerLinkActive="active" routerLink="/products" translate> other.menus.imprint </li>
+          <li routerLinkActive="active" translate>  other.menus.data_protection </li>
+          <li class="m-t-40" translate> particals.footer.license </li>
+        </ul>
+      </div>
+
+    </div>
+  
+  
+    
+    <div class="left-wrap">
+      <div class="logo-tablet" routerLink="/home">
+        <img [src]="logoMobile" alt="Logo">
+      </div>
+      <div class="column">
+        <div class="title" translate> particals.footer.contact </div>
+        <ul>
+          <li> 
+            <ion-icon class="m-r-15" name="phone"></ion-icon>
+            <span>{{ companyPhone }}</span>
+          </li>
+          <li class="sm-m-b-40">
+            <ion-icon class="m-r-15" name="mail"></ion-icon>
+            <span>{{ companyMail }}</span>
+          </li>
+          <li class="m-t-40-mobile" translate> particals.footer.license </li>
+        </ul>
+       
+      </div>
+    </div>
+
+  </div>
+ 
+</div>

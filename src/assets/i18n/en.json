@@ -1,0 +1,99 @@
+{
+  "components": {
+    "auth": {
+      "login": {
+        "title": "Enter",
+        "subtitle": "Noch kein Konto?",
+        "register": "Registration",
+        "forgot": "Forgot Password?"
+      },
+      "register": {
+        "title": "Registration",
+        "subtitle": "Already registered?",
+        "login": "Enter",
+        "forgot": "Forgot Password?"
+      },
+      "forgot": {
+        "title": "Registration",
+        "subtitle": "Already registered?",
+        "login": "Enter"
+      },
+      "inputs": {
+        "email": {
+          "label": "Your email address *",
+          "placeholder": "Your email address"
+        },
+        "password": {
+          "label": "Enter your password *",
+          "placeholder": "Your password"
+        },
+        "repeat_password": {
+          "label": "Repeat password *",
+          "placeholder": "Your password"
+        }
+      },
+      "checkboxes": {
+        "agreement": "I agree to the <span> Terms of Use </span> and <br> <span>Privacy Policy </span>."
+      },
+      "socials": {
+        "facebook": "Log in with Facebook",
+        "google": "Sign in with Google"
+      }
+    },
+    "my_qr_center": {
+      "title": "Wenn Sie unseren QR-Code nicht über unsere Website erworben haben, geben Sie bitte Ihren neunstelligen Code in das untenstehende Feld ein oder nutzen Sie die Scan-Funktion:",
+      "button_confirm": "Confirm",
+      "button_scan": "Scan"
+    }
+  },
+  "particals": {
+    "header": {
+      "register": "Register"
+    },
+    "footer": {
+      "navigation": "Navigation",
+      "about_us": "About Us",
+      "contact": "Contact",
+      "license": "ⓒ 2023 VorfahrQR, Alle Rechte vorbehalten"
+    }
+  },
+  "layouts": {
+    "menu_layout": {
+      "my_archive": "My archive",
+      "access_settings": "Access Settings",
+      "my_qr_center": "My QR center",
+      "account_settings": "Account Settings",
+      "support_center": "Support-Center",
+      "logout": "Log out"
+    }
+  },
+  "modals": {
+    "custom_modal": {
+      "register": {
+        "title": "<span>Thank you,</span> for registering with us!",
+        "subtitle": "Unfortunately, it seems like you haven't confirmed your email yet. We have sent you another confirmation email. Please check your mailbox and the 'Spam' and 'Promotion' folders if the email ended up there.",
+        "button_text": "Send email again"
+      }
+    }
+  },
+  "other":{
+    "menus": {
+      "home": "Main page",
+      "products": "Products",
+      "price": "Prices",
+      "faq": "FAQ",
+      "contact": "Contact",
+      "about_us": "About Us",
+      "our_terms": "Our Terms",
+      "imprint": "Imprint",
+      "data_protection": "Data protection"
+    },
+    "http_errors": {
+      "403": "Incorrect login or password",
+      "404": "User not exist",
+      "409": "User exist",
+      "500": "Something went wrong",
+      "429": "You have reached your daily request limit"
+    }
+  }
+}
