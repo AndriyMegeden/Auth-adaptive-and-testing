@@ -50,8 +50,14 @@ app-root{
   ion-header, ion-footer{
     ion-toolbar{
       --padding-bottom: 0px;
-      --padding-top: 0px
+      --padding-top: 0px;
+      --background: white;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2), 0 -4px 8px rgba(0, 0, 0, 0.2); // Тінь зверху і знизу
+      --border-width: 0px 0px 0px 0px !important;
     }
   }
+}
+ion-content {
+  --ion-background-color: white;
 }
 
